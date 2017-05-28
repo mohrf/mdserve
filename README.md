@@ -1,2 +1,2 @@
-# serve-md
-markdown serving 
+# mdserve
+markdown serving with auto refresh
