@@ -1,10 +1,12 @@
 // libraries
-const app = require('express')();
+const express = require('express');
+const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const fs = require('fs');
 const chokidar = require('chokidar');
-const md = require('markdown-it')(); 
+const md = require('markdown-it')(require('../lib/highlight-code')());
+const path = require('path');
 
 // set templating engine
 app.set('view engine', 'pug'); 
@@ -41,6 +43,10 @@ server.listen(2212);
 io.on('connection', () => {
     console.log('new client connected');
 }); 
+
+const dir = path.join(__dirname, '..', 'node_modules');
+console.log(dir);
+app.use('/static', express.static(dir)) ;
 
 // Route that opens markdown file
 app.get('/:file', (req, res) => { 
