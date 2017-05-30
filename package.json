@@ -1,19 +1,26 @@
 {
-  "name": "serve-md",
+  "name": "mdserve",
   "version": "0.0.1",
-  "description": "Serve local Markdown files",
-  "main": "index.js",
+  "description": "Markdown serving with auto refresh",
+  "main": "mdserve.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohrf/serve-md.git"
+    "url": "git+https://github.com/mohrf/mdserve.git"
   },
-  "author": "Fernando Mohr",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mohrf/serve-md/issues"
+    "url": "https://github.com/mohrf/mdserve/issues"
   },
-  "homepage": "https://github.com/mohrf/serve-md#readme"
+  "homepage": "https://github.com/mohrf/mdserve#readme",
+  "dependencies": {
+    "chokidar": "^1.7.0",
+    "express": "^4.15.3",
+    "markdown-it": "^8.3.1",
+    "pug": "^2.0.0-rc.1",
+    "socket.io": "^2.0.1"
+  }
 }
