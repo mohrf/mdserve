@@ -14,11 +14,7 @@ app.set('view engine', 'pug');
 // file watchers
 const watchers = []; 
 
-/** 
- * Watch fileName and emit socket
- * message with file content 
- * change.
- */
+// emit socket message when file content change
 function watchFile(fileName){
     if (watchers[fileName])
 	return;
@@ -31,9 +27,9 @@ function watchFile(fileName){
 	}); 
     });
 }
-/** 
- * Open file from file system 
- */
+
+
+// Open file from file system 
 function openFile(fileName, callback){
     fs.readFile(fileName, 'utf8', callback); 
 } 
@@ -44,8 +40,8 @@ io.on('connection', () => {
     console.log('new client connected');
 }); 
 
+// share hightlight.js files
 const dir = path.join(__dirname, '..', 'node_modules');
-console.log(dir);
 app.use('/static', express.static(dir)) ;
 
 // Route that opens markdown file
