@@ -1,7 +1,7 @@
 {
   "name": "mdserve",
   "version": "0.0.1",
-  "description": "Markdown serving with auto refresh",
+  "description": "Local markdown serving with auto refresh",
   "bin": {
     "mdserve": "bin/mdserve.js"
   },
@@ -13,8 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/mohrf/mdserve.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Fernando Mohr @f__mohr",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mohrf/mdserve/issues"
   },
