@@ -2,9 +2,12 @@
   "name": "mdserve",
   "version": "0.0.1",
   "description": "Markdown serving with auto refresh",
-  "main": "mdserve.js",
+  "bin": {
+    "mdserve": "bin/mdserve.js"
+  },
+  "main": "./lib/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/_mocha"
   },
   "repository": {
     "type": "git",
@@ -17,11 +20,17 @@
   },
   "homepage": "https://github.com/mohrf/mdserve#readme",
   "dependencies": {
+    "args": "^3.0.2",
     "chokidar": "^1.7.0",
     "express": "^4.15.3",
     "highlight.js": "^9.11.0",
     "markdown-it": "^8.3.1",
     "pug": "^2.0.0-rc.1",
     "socket.io": "^2.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.0.1",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.4.2"
   }
 }

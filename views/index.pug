@@ -2,13 +2,15 @@ doctype html
 html
   head
     title=mdserve
-    link(rel='stylesheet', href='/static/highlight.js/styles/github.css')
+    link(rel='stylesheet', href='/static/github.css')
     script(src="/socket.io/socket.io.js")
     script.
       var socket = io();
       socket.on('#{fileName}', function(data) {
-        document.getElementById('content').innerHTML = data; 
-      }); 
+        document.getElementById('content').innerHTML = data;
+      });
+      socket.on('disconnect', function() {
+        document.getElementById('content').innerHTML = 'server disconnected';
+      });
     body
       div(id="content") !{content}
-  
