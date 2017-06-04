@@ -6,7 +6,7 @@ const chaiHttp = require('chai-http');
 chai.use(chaiHttp);
 const path = require('path');
 
-const server = require('../lib/server')(path.join(__dirname, 'markdown'));
+const server = require('../lib/server')(path.join(__dirname, 'files'));
 
 describe('server', () => {
 
@@ -41,6 +41,18 @@ describe('server', () => {
           done();
         });
     });
-  })
+  });
+
+  describe('GET image', () => {
+    it('it should return image', (done) => {
+      chai.request(server)
+        .get('/image.jpg')
+        .end( (err, res) => {
+          res.status.should.equal(200);
+          res.type.should.equal('image/jpeg');
+          done();
+        });
+    });
+  });
 
 });
