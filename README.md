@@ -37,6 +37,8 @@ $ mdserve
 And view markdown at [http://localhost:2212/example.md](http://localhost:2212/example.md) 
 ![example](https://github.com/mohrf/mdserve/blob/screenshots/mdserve-example.png?raw=true)
 
+## Credits
 
+Fernando Mohr [@f__mohr](https://twitter.com/f__mohr) 
 
 
