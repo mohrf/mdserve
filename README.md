@@ -1,6 +1,6 @@
 # mdserve
 
-Simple command-line markdown server with automatic refresh. **mdserve** will serve your markdown files on localhost and will automatically update them while you edit.
+Simple command-line markdown server with automatic refresh. **mdserve** will serve your markdown files at localhost and will automatically update them while you edit.
 
 
 ## Usage
@@ -17,18 +17,18 @@ And run this command in terminal
 $ mdserve <path>
 ```
 
-mdserve will serve markdown files on `localhost`
+mdserve will serve markdown files at `localhost`
 
 ## Example
 
-The local folder contais one markdown file `example.md`
+The local folder contains one markdown file `example.md`
 
 ```bash
 $ ls
 example.md
 ```
 
-Start mdserve 
+Start **mdserve** 
 
 ```bash
 $ mdserve
@@ -39,6 +39,6 @@ And view markdown at [http://localhost:2212/example.md](http://localhost:2212/ex
 
 ## Credits
 
-Fernando Mohr [@f__mohr](https://twitter.com/f__mohr) 
+Fernando Mohr ([@f__mohr](https://twitter.com/f__mohr))
 
 
