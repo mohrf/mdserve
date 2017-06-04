@@ -1,6 +1,6 @@
 {
   "name": "mdserve",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Local markdown serving with auto refresh",
   "bin": {
     "mdserve": "bin/mdserve.js"
